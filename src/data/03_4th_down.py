@@ -147,7 +147,7 @@ def derive_features(df: pd.DataFrame) -> pd.DataFrame:
         opts = {k: row[k] for k in ["go_wp","fg_wp","punt_wp"] if pd.notna(row[k])}
         if not opts:
             return pd.NA
-        best = max(opts, key=opts.get)
+        best = max(opts, key=opts.get) #type: ignore
         return best.replace("_wp","").upper()
     out["model_choice"] = out.apply(_model_choice, axis=1)
 
@@ -234,7 +234,7 @@ def main():
     ap = argparse.ArgumentParser(description="Build tidy 4th-down EDA dataset (no cleaning).")
     ap.add_argument("--in-dir", default="data/processed", help="dir with fourth_probs_<YEAR>.parquet")
     ap.add_argument("--seasons", default=None, help='e.g. "2014-2024" or "2019,2021"')
-    ap.add_argument("--out-parquet", default="data/processed/tidy_4th_decisions.parquet")
+    ap.add_argument("--out-parquet", default="data/processed/4th_down_data.parquet")
     args = ap.parse_args()
 
     years = parse_seasons(args.seasons)
@@ -259,7 +259,7 @@ def main():
     print("Availability (any season):", avail)
     if "agreement" in tidy.columns:
         print("Agreement (actual vs model):",
-              tidy.loc[tidy["actual_choice"].notna(), "agreement"].mean().round(3))
+              tidy.loc[tidy["actual_choice"].notna(), "agreement"].mean().round(3)) # type: ignore
 
 
 if __name__ == "__main__":
