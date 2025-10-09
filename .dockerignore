@@ -1,0 +1,22 @@
+# VCS and local envs
+.git
+.gitignore
+.venv
+.uv
+__pycache__
+
+# Node/Next
+web/node_modules
+web/.next
+web/.env.local
+
+# Data and large local outputs (not needed in image)
+data/
+reports/
+
+# Notebooks heavy files (keep artifacts)
+notebooks/*.ipynb
+
+# OS junk
+.DS_Store
+
