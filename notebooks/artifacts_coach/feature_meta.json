@@ -1,0 +1,30 @@
+{
+  "seed": 42,
+  "numeric_features": [
+    "yardline_100",
+    "ydstogo",
+    "qtr",
+    "game_seconds_remaining",
+    "score_differential",
+    "posteam_timeouts_remaining",
+    "defteam_timeouts_remaining",
+    "two_minute_drill",
+    "is_fg_range",
+    "fg_puts_ties_or_leads",
+    "is_game_deciding",
+    "is_losing_by_one_score"
+  ],
+  "categorical_features": [
+    "season_type",
+    "roof",
+    "surface",
+    "temp",
+    "wind"
+  ],
+  "class_order": [
+    "GO",
+    "FIELD_GOAL",
+    "PUNT"
+  ],
+  "input_dim": 25
+}

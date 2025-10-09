@@ -1,0 +1,32 @@
+{
+  "seed": 42,
+  "numeric_features": [
+    "yardline_100",
+    "fg_dist_yd",
+    "ydstogo",
+    "qtr",
+    "game_seconds_remaining",
+    "score_differential",
+    "posteam_timeouts_remaining",
+    "defteam_timeouts_remaining",
+    "two_minute_drill"
+  ],
+  "categorical_features": [
+    "season_type",
+    "roof",
+    "surface",
+    "temp",
+    "wind",
+    "yardline_zone",
+    "ytg_bin"
+  ],
+  "targets": [
+    "fg_make_prob",
+    "first_down_prob"
+  ],
+  "heads": {
+    "fg_make": 0,
+    "go_conv": 1
+  },
+  "input_dim": 31
+}
