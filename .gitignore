@@ -8,11 +8,12 @@ __pycache__/
 .uv/
 .env
 
-# Data & artifacts
+# Data (keep out of repo), but DO track model artifacts for deployment
 data/raw/
 data/processed/
 artifacts/
 models/
-notebooks/artifacts_coach/
-notebooks/artifacts_wp/
-notebooks/artifacts_comp/
+# Allow artifacts to be committed (needed for HF Space & Docker build)
+!notebooks/artifacts_coach/
+!notebooks/artifacts_wp/
+!notebooks/artifacts_comp/
