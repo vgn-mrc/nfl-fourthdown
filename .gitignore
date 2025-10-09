@@ -13,6 +13,3 @@ data/raw/
 data/processed/
 artifacts/
 models/
-notebooks/artifacts_coach/
-notebooks/artifacts_wp/
-notebooks/artifacts_comp/
