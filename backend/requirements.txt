@@ -1,9 +1,0 @@
-fastapi>=0.115.2
-uvicorn[standard]>=0.30.6
-# Use standard CPU wheel; tensorflow-cpu is not published for 2.18.x
-tensorflow==2.18.0
-# Match training version used to create preprocess.joblib
-scikit-learn==1.6.1
-pandas>=1.5.3
-numpy>=1.26.4
-joblib>=1.3.2
